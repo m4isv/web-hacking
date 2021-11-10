@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
+  <title>Desec Web Hacking</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--navbar-fixed-init-here-->
+  <div class="navbar-fixed">
+      <nav class="blue z-depth-5">
+    <div class="nav-wrapper">
+      <a href="#" class="center brand-logo">
+        <img src="https://desecsecurity.com/academy/imgs/logo_desec_responsive.png" width="100px" height="60px">
+        
+       
+        </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <!--
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Sass</a></li>
+        <li><a href="#">Components</a></li>
+        <li><a href="#">Javascript</a></li>
+        <li><a href="#">Mobile</a></li>
+      </ul>
+      -->
+    </div>
+  </nav>
+  </div>
+  <!-- end-navbar-fixed here-->
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#inicio">inicio</a></li>
+    <li><a href="#sql">linguagem sql</a></li>
+    <li><a href="#">pentest</a></li>
+    <li><a href="#">mais</a></li>
+  </ul>
+
+<!--write here-->
+<div class="container" id="inicio">
+  <div class="card-panel transparent">
+    <h5 class="center-align white-text">
+      curso da Desec Web Hacking
+    </h5>
+    <blockquote class="white-text">
+      essas Anotaçoes Foi feito Para  o app termux e userland, nao tenho pc, portanto nao tem anotaçoes sobre a feramenta burpsuit
+    </blockquote> 
+    
+    <p class="white-text">
+      Preparando o Ambiente:
+      <span>apt install gobuster</span>
+    </p>
+  </div>
+</div>
+<!--end write-->
+
+<!--languagem sql-->
+<div class="container">
+	<div class="card-panel transparent">
+		<h3 class="center-align white-text" id="sql">
+			linguagem sql
+		</h3>
+
+		<p class="white-text center-align">Baixe o useland</p>
+	</div>
+
+	<div class="center">
+		 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/UserLAnd_Logo_PNG.png" class="responsive-img" alt="useland"></img>
+	</div>
+
+	<aside class="center large">
+		 <a href="https://f-droid.org/packages/tech.ula" target="_blank" class="btn-floating pulse"><i class="material-icons">file_download</i></a>
+		 <p class="white-text center-align"> baixe o useland e entrer no Kali Linux e atualize tudo. depois <span> sudo apt install mariadb-server</span></p>
+
+		 <p class="white-text center-align">inicia o servidor com <span> service mysql start</span></p>
+
+		 <p class="white-text center-align">verifica serviços ativos <span> service --atatus-all</span></p>
+
+		 <p class="white-text center-align">pra entrar no mysql digita <span> mysql</span></p>
+		 <p class="white-text center-align">ver todos os bancos de dados que vem no mysql <span> show databases; <span></p>
+		 <p class="white-text center-align">mostra o banco de dados que ta no momento <span> select database(); <span></p>
+		 <p class="white-text center-align">ver usuario padrao que ta <span> select user(); <span></p>
+		 <p class="white-text center-align">ver a versão do mysql <span> select version(); <span></p>
+		 <p class="white-text center-align">criando database <span> CREATE DATABASE desec; <span></p>
+		 <p class="white-text center-align">usa um banco de dados <span> use desec; <span></p>
+		 <p class="white-text center-align">ver as tabelas do banco <span> show tables; <span></p>
+		 <p class="white-text center-align">construindo uma tabela <span> create table usuarios<br>
+			 (id int primary key auto_increment,
+			 login varchar(20) not null,
+			 senha varchar(20) not null); <span></p>
+
+		 <p class="white-text center-align">descrever as informaçoes <span> describe usuarios; <span></p>
+		 <p class="white-text center-align">inserindo dados Na tabela <span> insert into usuarios values('1','admin','admin' ); <span></p>
+		 <p class="white-text center-align">consultando dados na tabela <span> select * from usuarios;<br>
+			 select senha from usuarios;<br>
+			 select id from usuarios:<br>
+			 select login from usuarios;
+			<span></p>
+
+		 <p class="white-text center-align">consulta mais especifica <span> select * from usuario where id="1"; <span></p>
+		 <p class="white-text center-align">ordenandos, comerça pelas letras a,b,c,d.. <span> select * from usuarios order by id; <span></p>
+		
+
+
+		<p class="white-text center-align">deletando  <span> delete from usuarios where id="3"; <span></p>
+		<p class="white-text center-align">jutando comandos <span> select concat(login,':',senha) from usuarios; <span></p>
+
+		<p class="white-text center-align">carregar arquivos <span> select load_file('/file.txt'); <span></p>
+
+		<p class="white-text center-align">coloca pra dormi <span> select sleep(4); <span></p>
+		<p class="white-text center-align">codigo das letras <span> select char(108,111,118,101,32,121,111,117); <span></p>
+		<p class="white-text center-align">saber tamanho <span> select length('desec'); <span></p>
+
+		<p class="white-text center-align">posição de caracteres <span> select substring('desec',1,4); <span></p>
+		<p class="white-text center-align">excluido database <span> drop database desec; <span></p>
+
+		 <p class="white-text center-align"> entendendo o sql injecto</p>
+
+		 <p class="white-text center-align">passando <span> select * from usuarios where login='hacker' or 20=20;#' and senha='123'; <span></p>
+		
+		 <p class="white-text center-align">limita so aparece o primeiro <span> select * from usuarios where login='hacker' or true limit 1 ;#' and senha='123'; <span></p>
+		
+
+		<p class="white-text center-align"> indentificando arquivos e diretorios</p>
+	        <p class="white-text center-align">com o gobuster <span> gobuster dir -e -u http://127.0.0.1 -w big.txt</span></p>
+	        <p class="white-text center-align">com os codigo <span> gobuster dir -e -u http://127.0.0.1 -w big.txt -s "200,301,302,401"</span></p>
+	        <p class="white-text center-align">arquivos <span> gobuster dir -e -u http://127.0.0.1 -w big.txt -x .php, .txt, .sql, .bkp</span></p>
+
+	</aside>
+
+	
+</div>
+
+
+<!--comment -->
+	<div class="container center">
+	  <h3 class="white-text center-align">
+	    deixar um Comentario
+	  </h3>
+	  
+	  <div class="row">
+	    <form class="col s12">
+	      <div class="row">
+	        <div class="input-field col s6">
+	          <i class="material-icons prefix">account_circle</i>
+	          <input id="icon_prefix" type="text" class="validate">
+	          <label for="icon_prefix">First Name</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <i class="material-icons prefix">phone</i>
+	          <input id="icon_telephone" type="tel" class="validate">
+	          <label for="icon_telephone">Telephone</label>
+	        </div>
+	      </div>
+	    </form>
+	  </div>
+	  
+	  <button class="waves-effect waves-light btn-large">
+	    comenta
+	  </button>
+	</div><br><br>
+     
+<ul class="collection with-header">
+  <li class="collection-header"><h4>Comentarios</h4></li>
+  
+  <li class="collection-item avatar">
+    <img src="https://i.pinimg.com/736x/67/7c/51/677c51cdda3fa93710d874fb1011d81e.jpg" alt="" class="circle">
+    <span class="title">Hackerbr puxadas</span>
+    
+    <p>Muito Bom Mano ,top</p><br>
+    <p>ha 4 minutos atrás</p>
+   </li>
+     
+     
+   <li class="collection-item avatar">
+    <img src="http://lorempixel.com.br/500/400/?1" alt="" class="circle">
+    <span class="title">Brazol HackingBR</span>
+    <p>Muito Bom vlw, vou fazer no termux tambem.</p><br>
+    <p>ha 1 hora atrás</p>
+   </li>
+
+
+
+
+  <li class="collection-item avatar">
+    <img src="http://lorempixel.com.br/500/400/?2" alt="" class="circle">
+    <span class="title">Software Hacking</span>
+    
+    <p>krl mano, Muito top vai me ajuda mt vlw, tmj.</p><br>
+    <p>ha 4 horas atrás</p>
+   </li>
+   
+ </ul>
+
+
+<!--end comment-->
+
+
+<!--foot-->
+<footer class="page-footer teal lighten-2">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Desec Security Web Hacking</h5>
+        <p class="grey-text text-lighten-4">Abrigado a Todos os canais Por Disponibiliza cursos Sem cita Nomes por Segurança.<br>
+        <b>i love telegram🙂</b></p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="https://s.kwai.app/s/iDdxrYhT">
+            Ganhe Dinheiro Apenas Assistindo Videos Clique Aqui e Baixe o App; e insira o codigo de Convite <b>Kwai261703637</b>
+                        </a></li>
+          
+       
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2022 Copyright esse e um site de anotação, os direitos vai para a desec Security
+      
+    </div>
+  </div>
+</footer>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
